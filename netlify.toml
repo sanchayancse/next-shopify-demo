@@ -1,0 +1,43 @@
+[build]
+  command = "yarn build && yarn export"
+  publish = "out"
+  functions = './functions' 
+
+[build.environment]
+NETLIFY_NEXT_PLUGIN_SKIP = "true"  
+
+[dev]
+  command = "npm run dev"
+  framework = "#custom"
+  port = 8888
+  targetPort = 3000
+  autoLaunch = true
+
+[functions]
+  directory = "functions/"    
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"
+
+[[redirects]]    
+from = '/api1/*'
+to = '/.netlify/functions/:splat'
+status = 200
+
+[[redirects]]
+    from = "/hex/:color"
+    to = "/.netlify/functions/color"
+    status = 200
+    force = true
+
+[[redirects]]
+    from = "/rgb/:r/:g/:b"
+    to = "/.netlify/functions/color"
+    status = 200
+    force = true
+
+[[redirects]]
+    from = "/named/:color"
+    to = "/.netlify/functions/color"
+    status = 200
+    force = true
