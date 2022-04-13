@@ -78,3 +78,11 @@
 //     }
 //   }
 // }
+
+const ProjectDetailsPage = ({ project }) => {
+  return (
+    <div>Hi</div>
+  )
+}
+
+export default ProjectDetailsPage;

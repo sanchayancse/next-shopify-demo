@@ -52,3 +52,12 @@
 // }
 
 // export default Gitlab
+
+
+const Gitlab = ({ projects }) => {
+  return(
+    <div>Hi</div>
+  )
+}
+
+export default Gitlab
