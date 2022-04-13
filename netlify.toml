@@ -1,6 +1,6 @@
 [build]
-  command = "npm build && npm export"
-  publish = "out"
+   command = "npm run build"
+  publish = ".next"
   functions = './functions' 
 
 [build.environment]
