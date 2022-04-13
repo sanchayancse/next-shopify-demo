@@ -43,11 +43,12 @@ const Beauty = (props) =>
             />
             <Card.Group itemsPerRow={props.isMobile ? 3 : 4}>
               {props.beautyProducts?.map(function(product, idx){
-                const charityArr = props.charity;
-                const type = getCookie('charity') ? getCookie('charity') : 'care';
-                let message = charityArr[type].desc;
-                message = message.replace('[[unit]]', charityArr[type].unit);
-                message = message.replace('[[price]]', charityArr[type].price);
+                // const charityArr = props.charity;
+                // const type = getCookie('charity') ? getCookie('charity') : 'care';
+                let message
+                // let message = charityArr[type].desc;
+                // message = message.replace('[[unit]]', charityArr[type].unit);
+                // message = message.replace('[[price]]', charityArr[type].price);
                   return (console.log(product) || (
                     <Link key={product.id} href={`product/${product.id}`}>
                       <Card raised>
